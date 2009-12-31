@@ -1,0 +1,35 @@
+body {
+  background-color: #dddddd;
+
+  margin: 5px 20px 5px 20px;
+}
+
+div#MainContainer {
+  background-color: #ffffff;
+
+  border-style: solid;
+  border-width: thin;
+
+  padding: 0px 20px 0px 20px;
+
+  height: 100%;
+}
+
+div#NavigationBar {
+  float: left;
+
+  border-right-style: solid;
+  border-right-width: thin;
+
+  padding: 0px 20px 0px 20px;
+}
+
+div#ContentBox {
+}
+
+div#LatestActivity {
+  border-style: solid;
+  border-width: thin;
+
+  float: right;
+}
