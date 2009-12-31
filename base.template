@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>SampleTrackr</title>
+    <title>SampleTrackr | {{ navigation_name }}</title>
     <link
        rel="stylesheet"
        type="text/css"
@@ -73,22 +73,22 @@
 	  </dd>
 	  <dt>About SampleTrackr</dt>
 	  <dd>
-	    <a href="/about/history.html">
+	    <a href="/about/history">
 	      History
 	    </a>
 	  </dd>
 	  <dd>
-	    <a href="/about/technology.html">
+	    <a href="/about/technology">
 	      Technology
 	    </a>
 	  </dd>
 	  <dd>
-	    <a href="/about/faq.html">
+	    <a href="/about/faq">
 	      F.A.Q.
 	    </a>
 	  </dd>
 	  <dd>
-	    <a href="/about/legalese.html">
+	    <a href="/about/legalese">
 	      Legalese
 	    </a>
 	  </dd>

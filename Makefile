@@ -19,7 +19,7 @@ third_party_tests:
 	$(PYTHON) $(MOX_HOME)/mox_test.py
 
 development_server:
-	$(PYTHON) $(GAE_HOME)/dev_appserver.py . >/dev/null 2>&1
+	$(PYTHON) $(GAE_HOME)/dev_appserver.py .
 
 .PHONY: test builtin_tests third_party_tests development_server
 
