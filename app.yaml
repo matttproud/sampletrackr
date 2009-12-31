@@ -1,8 +1,12 @@
-application: sampler
+application: sampletrackr
 version: 1
 runtime: python
 api_version: 1
 
 handlers:
+- url: /static
+  static_dir: static
+
 - url: /.*
-  script: index.py
+  script: main.py
+
