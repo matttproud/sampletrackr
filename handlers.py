@@ -1,6 +1,9 @@
 #!/usr/bin/python2.4
 
 import logging
+import os
+
+import log
 
 import utilities
 
@@ -11,32 +14,34 @@ from google.appengine.ext import webapp
 from google.appengine.ext.webapp import template
 from google.appengine.ext.webapp.util import run_wsgi_app
 
+def _RenderBaseFromContent(**expansions):
+  base_resource = utilities.GetResource('template/base.template')
+  return template.render(base_resource, expansions)
+
 
 class Main(webapp.RequestHandler):
   def get(self):
-    resource = utilities._GetResource('base.template')
-    self.response.out.write(template.render(resource, {'navigation_name': 'Home'}))
+    page = utilities.GetResource('template/main.template')
+    page_content = template.render(page, {})
+    entire_content = _RenderBaseFromContent(
+        content=page_content, navigation_name='home')
+    self.response.out.write(entire_content)
 
 
 class About(webapp.RequestHandler):
-  def GetHistory(self, dispatch_method_name):   
-    self.response.out.write(template.render(resource, {'title' : dispatch_method_name}))
-
-
-  def get(self, page):
-    logging.info(page)
-    resource = utilities._GetResource('base.template')
+  def get(self, page_name):
+    page = utilities.GetResource('template/about/' + page_name + '.template')
     
-    requested_page = str(page).lower().capitalize()
-    logging.info(requested_page)
-    dispatch_method_name = 'Get%s' % requested_page
-    dispatch_method = getattr(self, dispatch_method_name, None)
-    logging.info(dispatch_method_name)
-    logging.info(dispatch_method)
-    if not dispatch_method:
-      logging.info('absent')
-      return
-    logging.info('present')
+    if page:
+      page_content = template.render(page, {})
+    
+      entire_content = _RenderBaseFromContent(
+          content=page_content, navigation_name=page_name)
+    
+      self.response.out.write(entire_content)
 
-    dispatch_method(self, dispatch_method_name)
+    else:
+      logging.info('Requested non-existent page %s.' % page_name)
+      self.error(404)
 
+    

@@ -92,46 +92,15 @@
 	      Legalese
 	    </a>
 	  </dd>
+	  <dd>
+	    <a href="/about/contact">
+	      Contact
+	    </a>
+	  </dd>
 	</dl>
       </div>
       <div id="ContentBox">
-	<!-- This should be a gadget. -->
-	<div id="LatestActivity">
-	  <h2>
-	    Latest Activity
-	  </h2>
-	  <hr />
-	  <dl>
-	    <dt>
-              Sources
-            </dt>
-            <dd>
-              Five minutes ago: Speech by Ronald Reagan
-            </dd>
-	    <dd>
-	      Yesterday: Unknown Speech in East German Politburo
-	    </dd>
-	    <dt>
-	      Uses
-	    </dt>
-	    <dd>
-	      Two days ago: Pink Floyd - Some Song
-	    </dd>
-	  </dl>
-	</div>
-	<p>
-	  Welcome to SampleTrackr!
-	</p>
-	<p>
-	  This website catalogs both the use and the source of samples
-	  across various media, particularly music.  It aims to be the most
-	  comprehensive of its type across the world.
-	</p>
-	<p>
-	  You are welcome and encouraged to contribute.  If there is a glaring
-	  omission or an error, please sign-in and fix it.  The more information
-	  we have, the more useful of a repository this will be to you.
-	</p>
+	{{ content }}
       </div>
     </div>
   </body>
