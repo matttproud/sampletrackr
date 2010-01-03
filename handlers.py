@@ -5,6 +5,7 @@ import os
 
 import log
 
+import models
 import utilities
 
 from django import http
@@ -31,17 +32,37 @@ class Main(webapp.RequestHandler):
 class About(webapp.RequestHandler):
   def get(self, page_name):
     page = utilities.GetResource('template/about/' + page_name + '.template')
-    
+
     if page:
       page_content = template.render(page, {})
-    
+
       entire_content = _RenderBaseFromContent(
           content=page_content, navigation_name=page_name)
-    
+
       self.response.out.write(entire_content)
 
     else:
       logging.info('Requested non-existent page %s.' % page_name)
       self.error(404)
 
-    
+
+class Source(webapp.RequestHandler):
+  def get(self, page_name):
+    if page_name == 'search':
+      sources = models.SampleSource.gql('ORDER BY title')
+
+      page = utilities.GetResource('template/source/search.template')
+
+      page_content = template.render(page, {'sources':sources})
+
+      entire_content = _RenderBaseFromContent(
+          content=page_content, navigation_name=page_name)
+
+      self.response.out.write(entire_content)
+    else:
+      self.error(404)
+
+
+class Use(webapp.RequestHandler):
+  def get(self, page_name):
+    self.error(404)

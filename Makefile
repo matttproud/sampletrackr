@@ -1,3 +1,4 @@
+DATASTORE=$(PWD)/datastore
 THIRD_PARTY=$(PWD)/third-party
 NONDEPLOYMENT=$(THIRD_PARTY)/nondeployment
 DEPLOYMENT=$(THIRD_PARTY)/deployment
@@ -7,6 +8,7 @@ GAE_HOME=$(NONDEPLOYMENT)/google_appengine-1.3.0
 PATH += $(GAE_HOME)
 
 FIND ?= find
+MKDIR ?= mkdir
 PYTHON ?= python2.5
 RM ?= rm
 
@@ -28,7 +30,8 @@ third_party_tests:
 	$(PYTHON) *_test.py
 
 development_server:
-	$(PYTHON) $(GAE_HOME)/dev_appserver.py .
+	$(PYTHON) $(GAE_HOME)/dev_appserver.py \
+	  --datastore_path=$(DATASTORE) .
 
 .PHONY: test builtin_tests third_party_tests development_server clean
 

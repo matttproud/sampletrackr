@@ -20,54 +20,54 @@
 	<dl>
 	  <dt>Sample Sources</dt>
 	  <dd>
-	    <a href="/sources/frequency.html">
+	    <a href="/sources/search?sort=frequency">
 	      By Frequency
 	    </a>
 	  </dd>
 	  <dd>
-	    <a href="/sources/name.html">
-	      By Name
+	    <a href="/sources/search?sort=title">
+	      By Title
 	    </a>
 	  </dd>
 	  <dd>
-	    <a href="/sources/type.html">
+	    <a href="/sources/search?sort=type">
 	      By Type
 	    </a>
 	  </dd>
 	  <dd>
-	    <a href="/sources/annotated.html">
+	    <a href="/sources/search?sort=annotated">
 	      Annotated with Media
 	    </a>
 	  </dd>
 	  <dd>
-	    <a href="/sources/random.html">
+	    <a href="/sources/search?method=random">
 	      Random Source
 	    </a>
 	  </dd>
 
 	  <dt>Sample Uses</dt>
 	  <dd>
-	    <a href="/uses/frequency.html">
+	    <a href="/uses/search?sort=frequency">
 	      By Frequency
 	    </a>
 	  </dd>
 	  <dd>
-	    <a href="/uses/name.html">
-	      By Name
+	    <a href="/uses/search?sort=title">
+	      By Title
 	    </a>
 	  </dd>
 	  <dd>
-	    <a href="/uses/type.html">
+	    <a href="/uses/search?sort=type">
 	      By Type
 	    </a>
 	  </dd>
 	  <dd>
-	    <a href="/uses/annotated.html">
+	    <a href="/uses/search?sort=annotated">
 	      Annotated with Media
 	    </a>
 	  </dd>
 	  <dd>
-	    <a href="/uses/random.html">
+	    <a href="/uses/search?method=random">
 	      Random Use
 	    </a>
 	  </dd>

@@ -1,7 +1,7 @@
 body {
   background-color: #dddddd;
 
-  margin: 5px 20px 5px 20px;
+  margin: 5px 20px 5px 0px;
 }
 
 div#MainContainer {
@@ -10,7 +10,7 @@ div#MainContainer {
   border-style: solid;
   border-width: thin;
 
-  padding: 0px 20px 0px 20px;
+  padding: 0px 20px 0px 0px;
 
   height: 100%;
 }

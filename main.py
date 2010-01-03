@@ -10,7 +10,9 @@ from google.appengine.ext.webapp.util import run_wsgi_app
 
 application = webapp.WSGIApplication(
     [('/', handlers.Main),
-     ('/about/(\w+)', handlers.About),],
+     ('/about/(\w+)', handlers.About),
+     ('/sources/(\w+)', handlers.Source),
+     ('/uses/(\w+)', handlers.Use),],
     debug=True)
 
 def main():
