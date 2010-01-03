@@ -1,7 +1,23 @@
 body {
   background-color: #dddddd;
 
-  margin: 5px 20px 5px 0px;
+  margin: 5px 20px 5px 20px;
+}
+
+div#Header {
+  border-bottom-style: solid;
+  border-bottom-width: thin;
+
+  padding: 0px 20px 0px 20px;
+}
+
+div#Footer {
+  clear: both;
+
+  border-top-style: solid;
+  border-top-width: thin;
+
+  padding: 0px 20px 0px 20px;
 }
 
 div#MainContainer {
@@ -9,22 +25,23 @@ div#MainContainer {
 
   border-style: solid;
   border-width: thin;
-
-  padding: 0px 20px 0px 0px;
-
-  height: 100%;
 }
 
 div#NavigationBar {
   float: left;
 
-  border-right-style: solid;
-  border-right-width: thin;
-
+  width: 180px;
   padding: 0px 20px 0px 20px;
+
+  margin-top: 0px;
+
+  background-color: #eeeeee;
 }
 
 div#ContentBox {
+  padding: 0px 20px 0px 20px;
+
+  margin-left: 220px;
 }
 
 div#LatestActivity {
@@ -32,4 +49,18 @@ div#LatestActivity {
   border-width: thin;
 
   float: right;
+
+  padding: 0px 20px 0px 20px;
+
+  max-width: 280px;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  text-decoration: none;
 }

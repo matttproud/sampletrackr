@@ -49,7 +49,11 @@ class About(webapp.RequestHandler):
 class Source(webapp.RequestHandler):
   def get(self, page_name):
     if page_name == 'search':
-      sources = models.SampleSource.gql('ORDER BY title')
+      sort_criterion = self.request.get('sort')
+      if not sort_criterion in ('classification', 'title'):
+        sort_criterion = 'title'
+      sources = models.SampleSource.all()
+      sources.order(sort_criterion)
 
       page = utilities.GetResource('template/source/search.template')
 

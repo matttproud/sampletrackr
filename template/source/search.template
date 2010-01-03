@@ -9,14 +9,20 @@
             <th>
               Classification
             </th>
+            <th>
+              Instances
+            </th>
           </tr>
           {% for source in sources %}
           <tr>
             <td>
-            {{ source.title }}
+              {{ source.title }}
             </td>
             <td>
-            {{ source.classification }}
+              {{ source.classification }}
+            </td>
+            <td>
+              Unknown
             </td>
           </tr>
           {% endfor %}
