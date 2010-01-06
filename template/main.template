@@ -1,4 +1,6 @@
-        <!-- This should be a gadget. -->
+  <!-- -*- mode: HTML -*- -->
+
+  <!-- This should be a gadget. -->
 	<div id="LatestActivity">
 	  <h2>
 	    Latest Activity

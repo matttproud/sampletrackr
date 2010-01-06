@@ -1,4 +1,5 @@
 <html>
+  <!-- -*- mode: HTML -*- -->
   <head>
     <title>
       SampleTrackr | {{ navigation_name }}
