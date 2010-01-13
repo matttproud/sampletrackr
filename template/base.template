@@ -4,10 +4,15 @@
     <title>
       SampleTrackr | {{ navigation_name }}
     </title>
+    <!-- Items will be in 'google' namespace. -->
     <link
        rel="stylesheet"
        type="text/css"
        href="/static/base.css" />
+    <script
+       type="text/javascript"
+       src="http://www.google.com/jsapi?key=ABQIAAAAAEvC4jPlwgotwmJlQtRojhTWq2iZe2bMg_N0t14dCDE_0domIhR5wjPKRytypC9H49m37uFVZSgWvg">
+    </script>
   </head>
 
   <body>
