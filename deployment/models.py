@@ -64,7 +64,7 @@ class Cue(polymodel.PolyModel):
   classification = db.ReferenceProperty(CueClassification)
   #
   creator = db.UserProperty()
-  
+
 
 class TemporalCue(Cue):
   #
@@ -74,17 +74,18 @@ class TemporalCue(Cue):
 class TextualCue(Cue):
   #
   offset_in_pages = db.IntegerProperty()
-  
+
 
 class Sample(db.Model):
   #
-  text = db.StringProperty()
+  text = db.TextProperty()
   #
   source = db.ReferenceProperty(SampleSource)
   #
   creator = db.UserProperty()
 
 class SampleInstance(db.Model):
+  # What about album and track information?
   #
   sample = db.ReferenceProperty(Sample)
   #
