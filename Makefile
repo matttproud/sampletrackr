@@ -11,7 +11,7 @@ export MKDIR ?= mkdir
 export PYTHON ?= python2.5
 export RM ?= rm
 
-export PYTHONPATH ?= $(MOX_HOME):$(GAE_HOME):$(DEPLOYMENT)
+export PYTHONPATH = $(MOX_HOME):$(GAE_HOME):$(DEPLOYMENT)
 
 all: test
 

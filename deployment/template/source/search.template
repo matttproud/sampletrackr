@@ -1,8 +1,22 @@
         <!-- -*- mode: HTML -*- -->
+        <script type-"text/javascript">
+          $(document).ready(function() {
+            $(".zebra tr:even").addClass("alt");
+
+            var zebraTable = $(".zebra tr");
+
+            zebraTable.mouseover(function() {
+              $(this).addClass("over");
+            });
+            zebraTable.mouseout(function() {
+              $(this).removeClass("over");
+            });
+          });
+        </script>
         <h2>
           Search Sample Sources
         </h2>
-        <table>
+        <table class="zebra">
           <tr>
             <th>
               Title

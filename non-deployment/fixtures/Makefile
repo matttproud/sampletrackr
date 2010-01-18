@@ -7,6 +7,7 @@ all: content_classifications \
 include ../../Makefile
 
 content_classifications:
+	echo $(PYTHONPATH)
 	$(APPCFG) upload_data --config_file ../tools/bulk_loaders.py \
 	--filename=content_classifications.csv --kind=ContentClassification \
 	--url=http://localhost:8080/remote_api $(DEPLOYMENT)
