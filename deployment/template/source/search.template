@@ -1,33 +1,37 @@
         <!-- -*- mode: HTML -*- -->
-        <script type-"text/javascript">
+        </style>
+        <script
+           type="text/javascript"
+           src="/static/third-party/dataTables-1.5/media/js/jquery.dataTables.js">
+        </script>
+        <script
+           type="text/javascript">
           $(document).ready(function() {
-            $(".zebra tr:even").addClass("alt");
 
-            var zebraTable = $(".zebra tr");
+            var searchTableInitialization = {
+            };
 
-            zebraTable.mouseover(function() {
-              $(this).addClass("over");
-            });
-            zebraTable.mouseout(function() {
-              $(this).removeClass("over");
-            });
+            $('#SearchTable').dataTable(searchTableInitialization);
+
           });
         </script>
         <h2>
           Search Sample Sources
         </h2>
-        <table class="zebra">
-          <tr>
-            <th>
-              Title
-            </th>
-            <th>
-              Classification
-            </th>
-            <th>
-              Instances
-            </th>
-          </tr>
+        <table id="SearchTable">
+          <thead>
+            <tr>
+              <th>
+                Title
+              </th>
+              <th>
+                Classification
+              </th>
+              <th>
+                Instances
+              </th>
+            </tr>
+          </thead>
           {% for source in sources %}
           <tr>
             <td>
