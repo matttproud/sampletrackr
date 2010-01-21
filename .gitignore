@@ -1,3 +1,10 @@
 *.pyc
 *.pyo
 *~
+*.sql3
+*bulkloader-log*
+*bulkloader-progress*
+*#
+*.swp
+#*
+datastore
